@@ -2,10 +2,14 @@ body{
     background-color: lightgreen;
 }
 
-h1{
+h3{
     color: black;
 }
 
+input[type = text]{
+    border-color: green;
+    color:black;
+}
 input[type = submit]{
     border: none;
     background-color:inherit;

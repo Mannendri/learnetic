@@ -1,0 +1,12 @@
+body{
+    background-color: lightgreen;
+}
+
+h3{
+    color: black;
+}
+
+input[type = text]{
+    border-color: green;
+    color:black;
+}
