@@ -4,12 +4,14 @@ body{
 
 h1{
     color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 input[type = submit]{
     border: none;
-    background-color:inherit;
+    background-color: limegreen;
     font-size: 16px;
+    padding: 20px;
 }
 
 input:hover[type = submit]{
