@@ -4,35 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/create.css">
+    <link rel="stylesheet" href="static/edit.css">
 </head>
-
 <style>
 .btn {
     border: none;
     background-color:inherit;
     font-size: 16px;
 }
-
+    
 .btn:hover {background:gainsboro;}
 </style>
 
 <body>
-    
-    <h3>Title:</h3>
+    <h3>Title: <!-- {{Title}}--></h3>
     <form action="/" method= "post">
-        <input type="text" name="Title" placeholder="Enter a title">
+        <input type="text" name="Title" placeholder="Title">
     
-
     <h3>Term</h3>
         <input type="text" name="Term" placeholder="Term">
     <h3>Answer</h3>
         <input type="text" name="Answer" placeholder="Answer">
 
-    <button type="button"> Add a flashcard</button>
-    <input type = "submit" value = "Create!" />
-    
-    </form>
-
+    <button type="button">Update</button>
 </body>
 </html>
