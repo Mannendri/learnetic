@@ -1,12 +1,20 @@
 from flask import Flask, render_template, request
-
+import sqlite3
 app = Flask(__name__)
 
 @app.route('/', methods=["GET","POST"])
 def index():
     # ---Display all study sets---
     # Code below
-    return render_template("index.html")
+    conn = sqlite3.connect("./static/data/studysets.db")
+    curs = conn.cursor()
+    sets = []
+    rows = curs.execute("SELECT * FROM sets")
+    for row in rows:
+        set = {'id':row[0],'name':row[1], 'description':row[2]}
+        sets.append(set)
+    conn.close() 
+    return render_template("index.html", sets=sets)
 
 @app.route('/create', methods=["GET","POST"])
 def create():
