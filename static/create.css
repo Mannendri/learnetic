@@ -2,18 +2,34 @@ body{
     background-color: lightgreen;
 }
 
-h3{
+label{
+    font-size:200%;
     color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h3{
+    font-size:100%;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
 input[type = text]{
-    border-color: green;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color:none;
     color:black;
+    padding:20px;
+    width: 600px;
+    
 }
 input[type = submit]{
-    border: none;
-    background-color:inherit;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:limegreen;
     font-size: 16px;
+    padding:20px;
+    border-radius:50px;
+
 }
 
 input:hover[type = submit]{

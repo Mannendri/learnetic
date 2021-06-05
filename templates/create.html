@@ -8,31 +8,45 @@
 </head>
 
 <style>
-.btn {
+.button {
     border: none;
-    background-color:inherit;
+    background-color:limegreen;
     font-size: 16px;
+    padding:20px;
+    border-radius:50px;
 }
 
-.btn:hover {background:gainsboro;}
+.button:hover {background:gainsboro;}
+
+p.break{
+    line-height:2;
+}
+
 </style>
 
 <body>
     
-    <h3>Title:</h3>
+    
     <form action="/" method= "post">
+        <label>Title:</label>
         <input type="text" name="Title" placeholder="Enter a title">
     
-
-    <h3>Term</h3>
+    <br>
+    
+    <h3>Term:</h3>
         <input type="text" name="Term" placeholder="Term">
-    <h3>Answer</h3>
+    <br>
+    <h3>Answer:</h3>
         <input type="text" name="Answer" placeholder="Answer">
-
-    <button type="button"> Add a flashcard</button>
-    <input type = "submit" value = "Create!" />
     
     </form>
+    <br>
+    <button class="button"> Add a flashcard</button>
+
+    <p class= "break">
+    <input type = "submit" value = "Create!" />
+    </p>
+
 
 </body>
 </html>
