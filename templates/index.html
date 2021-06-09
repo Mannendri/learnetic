@@ -10,11 +10,16 @@
 
 <body>
     <h1>Title</h1>
-    <!--Present study sets from database?-->
+    <!--Present study sets from database-->
+    <ul>
+        {% for set in sets %}
+            <li>{{ set["name"] }} : {{ set["description"] }}</li>
+        {% endfor %}
+    </ul>
     <div>
-    <form action="/create" method= "post">
-        <input type="submit" value = "Create a Study Set" />
-    </form>
+        <form action="/create" method= "post">
+            <input type="submit" value = "Create a Study Set" />
+        </form>
     </div>
     
 </body>
