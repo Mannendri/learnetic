@@ -14,6 +14,8 @@
     font-size: 16px;
     padding:20px;
     border-radius:50px;
+    display: block;
+    margin: 0 auto;
 }
 
 .button:hover {background:gainsboro;}
@@ -26,21 +28,33 @@ p.break{
 
 <body>
     
-    
+    <!--Title and description of study set-->
+    <h4>Create a Study Set</h4>
     <form action="/" method= "post">
+        <div class = "intro">
         <label>Title:</label>
         <input type="text" name="Title" placeholder="Enter a title">
-    
-    <br>
-    
-    <h3>Term:</h3>
+        <br>
+        <label>Description:</label>
+        <input type="text" name="Descriptiom" placeholder="Enter a description">
+        </div>
+
+    <hr>
+    <!--Flashcard (div)-->
+    <h4>Flashcards:</h4>
+    <div>
+    <label>Term:</label>
         <input type="text" name="Term" placeholder="Term">
     <br>
-    <h3>Answer:</h3>
+    <label>Answer:</label>
         <input type="text" name="Answer" placeholder="Answer">
-    
+    </div>
+
     </form>
     <br>
+
+    <!--Button and input type submit-->
+
     <button class="button"> Add a flashcard</button>
 
     <p class= "break">

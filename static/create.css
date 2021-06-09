@@ -1,17 +1,32 @@
 body{
     background-color: lightgreen;
 }
-
-label{
-    font-size:200%;
+h4{
+    font-size:150%;
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 }
 
-h3{
-    font-size:100%;
+label{
+    font-size:150%;
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    display: inline-block;
+    width:130px;
+
+}
+
+div {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+.intro {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -20,7 +35,8 @@ input[type = text]{
     border-color:none;
     color:black;
     padding:20px;
-    width: 600px;
+    width: 450px;
+    border-radius: 15px;
     
 }
 input[type = submit]{
@@ -29,6 +45,9 @@ input[type = submit]{
     font-size: 16px;
     padding:20px;
     border-radius:50px;
+    text-align:center;
+    display: block;
+    margin: 0 auto;
 
 }
 
