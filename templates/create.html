@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Create a Study Set | learnetic</title>
     <link rel="stylesheet" href="static/create.css">
 </head>
 
@@ -29,6 +29,7 @@
 <body>
     
     <!--Title and description of study set-->
+    <img src = "/static/Title.JPG">
     <h4>Create a Study Set</h4>
     <form action="/" method= "post">
         <div class = "intro">
@@ -42,18 +43,18 @@
     <hr>
     <!--Flashcard (div)-->
     <h4>Flashcards:</h4>
-    <div>
+    <div class ="flash">
+
+    <br>
     <label>Term:</label>
         <input type="text" name="Term" placeholder="Term">
     <br>
     <label>Answer:</label>
         <input type="text" name="Answer" placeholder="Answer">
-    </div>
-
-    </form>
+    <br>
     <br>
 
-    <!--Button and input type submit-->
+    </div>
 
     <button class="button"> Add a flashcard</button>
 
@@ -61,22 +62,14 @@
     <input type = "submit" value = "Create!" />
     </p>
 
-        
-        <br>
-        
-        <h3>Term:</h3>
-            <input type="text" name="Term" placeholder="Term">
-        <br>
-        <h3>Answer:</h3>
-            <input type="text" name="Answer" placeholder="Answer">
-        <br>
-        <button class="button"> Add a flashcard</button>
-        <br>
-        <input class= "break" type = "submit" value = "Create!" />
-
-        <!--[Mannendri here] I moved the submit button inside of the form element. The form 
-        won't submit otherwise-->
     </form>
+    <br>
+
+    <!--Button and input type submit-->
+
+    <!--[Mannendri here] I moved the submit button inside of the form element. The form 
+        won't submit otherwise-->
+    
 
 
 
