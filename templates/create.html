@@ -20,7 +20,7 @@
 
 .button:hover {background:gainsboro;}
 
-p.break{
+.break{
     line-height:2;
 }
 
@@ -66,6 +66,25 @@ p.break{
     <input type = "submit" value = "Create!" />
     </p>
 
+        
+        <br>
+        
+        <h3>Term:</h3>
+            <input type="text" name="Term" placeholder="Term">
+        <br>
+        <h3>Answer:</h3>
+            <input type="text" name="Answer" placeholder="Answer">
+        <br>
+        <button class="button"> Add a flashcard</button>
+        <br>
+        <input class= "break" type = "submit" value = "Create!" />
 
+        <!--[Mannendri here] I moved the submit button inside of the form element. The form 
+        won't submit otherwise-->
+    </form>
+
+
+
+<script src="static/create.js"></script>
 </body>
 </html>
