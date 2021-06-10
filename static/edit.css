@@ -7,10 +7,15 @@ h3{
 }
 
 input[type = text]{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     border-color:none;
     color:black;
     padding:20px;
     width: 450px;
     border-radius: 15px;
+}
+
+img {
+    width: 20%;
+    height:20%;
 }

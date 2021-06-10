@@ -4,24 +4,27 @@ body{
 h4{
     font-size:150%;
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
 label{
     font-size:150%;
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Trebuchet MS', sans-serif;
     text-align: center;
     display: inline-block;
     width:130px;
 
 }
 
-div {
+.flash {
     text-align: center;
     display: block;
     margin: 0 auto;
+    background-color: gainsboro;
+    border: 5px double black;
+    width: 750px;
 }
 .intro {
     text-align: center;
@@ -31,7 +34,7 @@ div {
 
 
 input[type = text]{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     border-color:none;
     color:black;
     padding:20px;
@@ -40,7 +43,7 @@ input[type = text]{
     
 }
 input[type = submit]{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     background-color:limegreen;
     font-size: 16px;
     padding:20px;
@@ -53,4 +56,9 @@ input[type = submit]{
 
 input:hover[type = submit]{
     background: gainsboro;
+}
+
+img {
+    width: 20%;
+    height:20%;
 }
