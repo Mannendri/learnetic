@@ -16,6 +16,8 @@ input[type = text]{
 }
 
 img {
-    width: 20%;
-    height:20%;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 15vw;
 }
