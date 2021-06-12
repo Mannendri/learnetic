@@ -1,3 +1,6 @@
+:root{
+    --gray:#dcdde1;
+}
 body{
     background-color: lightgreen;
 }
@@ -22,7 +25,7 @@ label{
     text-align: center;
     display: block;
     margin: 0 auto;
-    background-color: gainsboro;
+    background-color: var(--gray);
     border: 5px double black;
     width: 750px;
 }
@@ -55,10 +58,12 @@ input[type = submit]{
 }
 
 input:hover[type = submit]{
-    background: gainsboro;
+    background: var(--gray);
 }
 
 img {
-    width: 20%;
-    height:20%;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 15vw;
 }

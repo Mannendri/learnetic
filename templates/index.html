@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learnetic</title>
     <link rel="stylesheet" href="static/index.css">
+    <link rel="shortcut icon" href="static/logo.png">
 </head>
 
 
 <body>
 
-    <img src = "/static/Title.JPG">
-
-    <ul>
+    <a href="/"><img src = "/static/Title.JPG"></a>
+    <div id="sets">
         {% for set in sets %}
-            <li>{{ set["name"] }} : {{ set["description"] }}</li>
+            <form action="/study" method="POST">
+                <input type="submit" name="set" class="set" 
+                value="{{ set['name'] }}">
+                </input>
+            </form>
         {% endfor %}
-    </ul>
+    </div>
 
     <div>
         <form action="/create" method= "post">
-            <input type="submit" value = "Create a Study Set" />
+            <input class="create" type="submit" value = "Create a Study Set" />
         </form>
     </div>
-    
+    <!-- <script src="static/index.js"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

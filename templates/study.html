@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study | learnetic</title>
     <link rel="stylesheet" href="static/study.css">
+    <link rel="shortcut icon" href="static/logo.png">
 </head>
 <style>
 .btn {
@@ -18,22 +19,22 @@
 
 
 <body>
-    <img src = "/static/Title.JPG">
-    <h1> <!--Title from that specific study set from database--> </h1>
-    <h3>Term</h3>
-    <input type="text" name="Term" value="default value">
-
-    <button onclick="answerFunction()">Answer</button>
-    <p id="answer"></p>
-
-
-
+    <a href="/"><img src = "/static/Title.JPG"></a>
+    <h1>{{ study_set }}</h1>
+    <ul id="flashcards">
+        {% for flashcard in flashcards %}
+            <li class="flashcard">
+                <p class="term">{{ flashcard['term'] }}</p>
+                <p class="definition">{{ flashcard['definition'] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
     <form action="/edit" method= "post">
         <input type="submit" value = "Edit" />
     </form>
-
     <button class="btn">Delete Study Set</button>
 
-<script src="static/study.js"></script>
+    <script src="static/study.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

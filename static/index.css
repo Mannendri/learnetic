@@ -1,5 +1,9 @@
+:root{
+    --gray:#dcdde1;
+}
 body{
     background-color: lightgreen;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 img {
@@ -10,19 +14,38 @@ img {
     margin-right: auto;
 }
 
+#sets{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em; 
+    margin: 0 0 2em 0;
+    padding:0;
+}
 
-input[type = submit]{
+.set{
+   background-color: white;
+   list-style-type: none;
+   border:none;
+   text-align: center;  
+   font-size: 1.5em;
+   padding: .5em;
+   font-weight: bold;
+}
+.set:hover{
+    background-color:var(--gray);
+}
+
+.create{
     border: none;
     background-color: limegreen;
     font-size: 16px;
     padding: 20px;
     border-radius: 50px;
-    font-family: 'Trebuchet MS', sans-serif;
 }
 
 
-input:hover[type = submit]{
-    background: gainsboro;
+.create:hover{
+    background: var(--gray);
 }
 
 div {text-align:center;}

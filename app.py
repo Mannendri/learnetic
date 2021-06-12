@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import sqlite3
+import json
 app = Flask(__name__)
 
 @app.route('/', methods=["GET","POST"])
@@ -26,6 +27,26 @@ def create():
         # Code below
         pass
     return render_template("create.html")
+
+@app.route('/study', methods=["GET","POST"])
+def study():
+    conn = sqlite3.connect("./static/data/studysets.db")
+    curs = conn.cursor()
+    if request.method=="POST":
+        study_set = request.form.get("set")
+        
+        current_set={}
+        rows = curs.execute("SELECT * FROM sets WHERE name='"+str(study_set)+"'")
+        for row in rows:
+            current_set = {'rowid':row[0],'name':row[1], 'description':row[2]}
+        flashcards=[]
+        rows = curs.execute("SELECT * FROM flashcards WHERE set_id=" + str(current_set['rowid']))
+        for row in rows:
+            flashcard = {'rowid':row[0],'set_id':row[1], 'term':row[2], 'definition':row[3]}
+            flashcards.append(flashcard)
+
+    conn.close() 
+    return render_template("study.html", study_set=study_set, flashcards=flashcards)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
