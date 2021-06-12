@@ -15,7 +15,7 @@ input[type = text]{
     border-radius: 15px;
 }
 
-img {
+#logo{
     position:absolute;
     top:0;
     left:0;
