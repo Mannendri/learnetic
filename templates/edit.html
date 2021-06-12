@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>learnetic</title>
     <link rel="stylesheet" href="static/edit.css">
     <link rel="shortcut icon" href="static/logo.png">
 </head>
@@ -15,19 +15,59 @@
 }
     
 .btn:hover {background:gainsboro;}
+
+body{
+    background-color: lightgreen;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+h3{
+    color: black;
+}
+
+input[type = text]{
+    font-family: 'Trebuchet MS', sans-serif;
+    border-color:none;
+    color:black;
+    padding:20px;
+    width: 450px;
+    border-radius: 15px;
+}
+
+#logo{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 15vw;
+}
+#edit-set-form{
+    text-align: center;
+    margin:100px;
+}
+input[type=submit]{
+    display: block;
+    color:black;
+    padding:.5em;
+    text-decoration: none;
+    background:limegreen;
+    width:100px;
+    border-radius: 10px;
+    margin:30px auto;
+    border:none;
+    font-size: 1em;
+}
 </style>
 
 <body>
-    <a href="/"><img src = "/static/Title.JPG"></a>
-    <h3>Title: <!-- {{Title}}--></h3>
-    <form action="/" method= "post">
-        <input type="text" name="Title" placeholder="Title">
-    
-    <h3>Term</h3>
-        <input type="text" name="Term" placeholder="Term">
-    <h3>Answer</h3>
-        <input type="text" name="Answer" placeholder="Answer">
-
-    <button type="button">Update</button>
+    <a href="/"><img id="logo" src = "/static/Title.JPG"></a>
+    <form id="edit-set-form" action="{{ '/edit/%s' % study_set['rowid'] }}" method="post">
+        <h1>Edit Study Set:</h1>
+        <label for="edit-name">Name</label>
+        <input type="text" id="edit-name" name="edit-name" value="{{ study_set['name'] }}" >
+        <label for="edit-description">Description</label>
+        <input type="text" id="edit-description" name="edit-description" value="{{ study_set['description'] }}">
+        <br>
+        <input type="submit" value="Update">
+    </form>
 </body>
 </html>

@@ -29,10 +29,8 @@
             </li>
         {% endfor %}
     </ul>
-    <form action="/edit" method= "post">
-        <input type="submit" value = "Edit" />
-    </form>
-    <button class="btn">Delete Study Set</button>
+    <a class="button" href="{{ '/edit/%s' % current_set['rowid'] }}">Edit Study Set</a>
+    <a class="button" href="{{ '/delete/%s' % current_set['rowid'] }}">Delete Study Set</a>
 
     <script src="static/study.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

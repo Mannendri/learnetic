@@ -12,6 +12,7 @@
 <body>
 
     <a href="/"><img src = "/static/Title.JPG"></a>
+    <h2>Study Sets</h2>
     <div id="sets">
         {% for set in sets %}
             <form action="/study" method="POST">
@@ -27,7 +28,6 @@
             <input class="create" type="submit" value = "Create a Study Set" />
         </form>
     </div>
-    <!-- <script src="static/index.js"></script>  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

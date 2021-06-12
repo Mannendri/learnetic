@@ -58,7 +58,32 @@ def study():
             flashcards.append(flashcard)
 
     conn.close() 
-    return render_template("study.html", study_set=study_set, flashcards=flashcards)
+    return render_template("study.html", study_set=study_set, flashcards=flashcards, current_set=current_set)
+
+@app.route('/edit/<rowid>', methods=['GET','POST'])
+def edit(rowid):
+    conn = sqlite3.connect("./static/data/studysets.db")
+    curs = conn.cursor()
+    if (request.method=='GET'):
+        rows = curs.execute("SELECT * FROM sets WHERE rowid="+str(rowid,))
+        for row in rows:
+            study_set = {'rowid':row[0],'name':row[1], 'description':row[2]}
+        return render_template("edit.html", study_set=study_set) 
+    elif (request.method=='POST'):
+        set_name = request.form.get("edit-name")
+        set_description = request.form.get("edit-description")
+        curs.execute("UPDATE sets SET name=(?),description=(?) WHERE rowid=(?)",(set_name, set_description, rowid))
+        conn.commit()
+    conn.close() 
+    return redirect(url_for('index')) 
+
+@app.route('/delete/<rowid>')
+def delete(rowid):
+    conn = sqlite3.connect("./static/data/studysets.db")
+    curs = conn.cursor()
+    curs.execute("DELETE FROM sets WHERE rowid=(?)", (rowid,))
+    conn.commit()     
+    return redirect(url_for('index')) 
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
