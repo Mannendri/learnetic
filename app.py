@@ -23,9 +23,21 @@ def create():
         # ---Create a study set in the db with its title and description---
         # Code below
 
+        name = request.form.get('Title')
+        description = request.form.get('Description')
+
+        conn = sqlite3.connect('/static/data/studysets.db')
+        cursor = conn.cursor()
+        cursor.execute("insert into sets (name, description) values((?),(?))",(name,description))
+        conn.commit()
+        conn.close()
+
+
         # ---Create a new flashcard in the db for every flashcard that was inputted in the form---
         # Code below
-        pass
+        term = request.form.get('Term')
+        answer = request.form.get('Answer')
+
     return render_template("create.html")
 
 @app.route('/study', methods=["GET","POST"])
@@ -50,3 +62,6 @@ def study():
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
+
+
+
