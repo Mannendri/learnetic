@@ -1,4 +1,4 @@
-# teamedge-final-project
+# teamedge-final-project | learnetic
 The goal of this project is to create a web app that can help students study 
 by allowing them to create study sets with flashcards. 
 We expect the finished product to allow 
